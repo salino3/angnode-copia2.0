@@ -1,6 +1,7 @@
-<div class="col-md-12">
-  <div class="card card-container">
+<div class="col-md-12 color">
+  <div class="card card-container ">
     <img
+    title="title"
       id="profile-img"
       src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
       class="profile-img-card"
@@ -15,6 +16,8 @@
       <div class="form-group">
         <label for="username">Username</label>
         <input
+        placeholder="Escribe tu nombre de usuario.."
+        title="title2"
           type="text"
           class="form-control"
           name="username"
@@ -23,8 +26,8 @@
           #username="ngModel"
         />
         <div
-          class="alert alert-danger"
-          role="alert"
+          class="alert alerts alert-danger"
+          role="alert alerts"
           *ngIf="f.submitted && username.invalid"
         >
           Username is required!
@@ -33,6 +36,8 @@
       <div class="form-group">
         <label for="password">Password</label>
         <input
+        placeholder="Escribe tu password.."
+        title="title3"
           type="password"
           class="form-control"
           name="password"
@@ -42,8 +47,8 @@
           #password="ngModel"
         />
         <div
-          class="alert alert-danger"
-          role="alert"
+          class="alert alerts alert-danger"
+          role="alert alerts"
           *ngIf="f.submitted && password.invalid"
         >
           <div *ngIf="password.errors.required">Password is required</div>
@@ -53,14 +58,14 @@
         </div>
       </div>
       <div class="form-group">
-        <button class="btn btn-primary btn-block">
+        <button type="submit" class="btn btn-primary myButton">
           Login
         </button>
       </div>
       <div class="form-group">
         <div
-          class="alert alert-danger"
-          role="alert"
+          class="alert alerts alert-danger"
+          role="alert alerts"
           *ngIf="f.submitted && isLoginFailed"
         >
           Login failed: {{ errorMessage }}

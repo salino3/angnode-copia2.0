@@ -1,4 +1,4 @@
-<div class="col-md-12">
+<div class="col-md-12 color">
   <div class="card card-container">
     <img
       id="profile-img"
@@ -24,7 +24,7 @@
           maxlength="20"
           #username="ngModel"
         />
-        <div class="alert-danger" *ngIf="f.submitted && username.invalid">
+        <div class="alert-danger alerts" *ngIf="f.submitted && username.invalid">
           <div *ngIf="username.errors.required">Username is required</div>
           <div *ngIf="username.errors.minlength">
             Username must be at least 3 characters
@@ -45,7 +45,7 @@
           email
           #email="ngModel"
         />
-        <div class="alert-danger" *ngIf="f.submitted && email.invalid">
+        <div class="alert-danger alerts" *ngIf="f.submitted && email.invalid">
           <div *ngIf="email.errors.required">Email is required</div>
           <div *ngIf="email.errors.email">
             Email must be a valid email address
@@ -63,7 +63,7 @@
           minlength="6"
           #password="ngModel"
         />
-        <div class="alert-danger" *ngIf="f.submitted && password.invalid">
+        <div class="alert-danger alerts" *ngIf="f.submitted && password.invalid">
           <div *ngIf="password.errors.required">Password is required</div>
           <div *ngIf="password.errors.minlength">
             Password must be at least 6 characters
@@ -71,15 +71,15 @@
         </div>
       </div>
       <div class="form-group">
-        <button class="btn btn-primary btn-block">Sign Up</button>
+        <button type="submit"  class="btn btn-primary myButton">Sign Up</button>
       </div>
 
-      <div class="alert alert-warning" *ngIf="f.submitted && isSignUpFailed">
+      <div class="alert alerts alert-warning" *ngIf="f.submitted && isSignUpFailed">
         Signup failed!<br />{{ errorMessage }}
       </div>
     </form>
 
-    <div class="alert alert-success" *ngIf="isSuccessful">
+    <div class="alert alerts alert-success" *ngIf="isSuccessful">
       Your registration is successful!
     </div>
   </div>

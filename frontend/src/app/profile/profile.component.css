@@ -1,0 +1,29 @@
+strong{  
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: blue;
+}
+p{
+   font-size: larger;
+}
+
+li{
+     list-style: none;
+}
+.jumbotron{
+      background-color: rgb(0, 204, 255);
+
+}
+.color{
+  background-color: blueviolet;
+}
+.h4{
+      background-color: blueviolet;
+      color:blue;
+      padding-bottom: 0.5em;
+      padding-top: 0.5em;
+
+}
+.padDiv{
+    padding-bottom: 1.5em;
+}
+
